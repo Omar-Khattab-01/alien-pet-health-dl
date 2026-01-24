@@ -1,0 +1,52 @@
+# OS
+.DS_Store
+__MACOSX/
+._*
+
+# Python / Notebooks
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+*.egg
+.ipynb_checkpoints/
+.python-version
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+env/
+.pyenv/
+
+# Build & Packaging
+build/
+dist/
+.eggs/
+*.whl
+pip-wheel-metadata/
+htmlcov/
+.coverage*
+.tox/
+.nox/
+.pytest_cache/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & outputs
+*.log
+*.out
+*.tmp
+
+# Node (in case frontend experiments are added)
+node_modules/
+coverage/
