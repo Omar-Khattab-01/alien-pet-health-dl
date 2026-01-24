@@ -47,6 +47,9 @@ htmlcov/
 *.out
 *.tmp
 
+# Docs artifacts
+docs/*.pdf
+
 # Node (in case frontend experiments are added)
 node_modules/
 coverage/

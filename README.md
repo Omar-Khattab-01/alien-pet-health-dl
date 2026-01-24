@@ -18,7 +18,7 @@ A Jupyter-driven workflow that builds and evaluates deep neural networks to pred
 - `src/alien-pet-health-deep-learning.ipynb` — main notebook with data loading, modeling experiments, and evaluation. Symlinks in `src/data` and `src/figs` point to the shared folders below so paths stay consistent.
 - `data/` — cached dataset (`alien_pet_health-realism-clean.csv`) downloaded automatically if missing.
 - `figs/` — generated training and evaluation plots.
-- `docs/` — placeholder for screenshots and documentation assets (PDF brief relocated here).
+- `docs/` — placeholder for screenshots and documentation assets.
 - `requirements.txt` — Python dependencies to reproduce the environment.
 - `LICENSE` — MIT license.
 
