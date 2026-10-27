@@ -1,55 +1,25 @@
-# Alien Pet Health Deep Learning Classifier
+# Alien Pet Health Classifier
 
-A Jupyter-driven workflow that builds and evaluates deep neural networks to predict alien pet health outcomes. The notebook downloads and caches the dataset, applies structured preprocessing, tunes regularization strategies, and reports production-ready metrics and plots.
+I used this CSI4106 artificial intelligence assignment to study how neural-network capacity and regularization affect classification on tabular data. The task is to predict the health outcome in a fictional alien-pet dataset and compare models using held-out data.
 
-## Features
-- One-click dataset caching with validation of required columns and target labels.
-- Reproducible train/validation/test split with scikit-learn pipelines for scaling/encoding.
-- Baseline dense network plus experiments on overfitting checks, early stopping, dropout, and L2 regularization.
-- Rich evaluation: F1, precision/recall, ROC-AUC, and saved learning-curve/ROC plots.
-- Self-contained notebook with helper utilities; figures land in `figs/` for sharing.
+The notebook follows the experiment from data preparation through model selection and evaluation.
 
-## Tech Stack
-- **Backend/ML:** Python 3.10+, TensorFlow/Keras, scikit-learn, NumPy, pandas
-- **Visualization:** Matplotlib
-- **Tooling:** Jupyter Notebook
+## What it explores
 
-## Project Structure
-- `src/alien-pet-health-deep-learning.ipynb` — main notebook with data loading, modeling experiments, and evaluation. Symlinks in `src/data` and `src/figs` point to the shared folders below so paths stay consistent.
-- `data/` — cached dataset (`alien_pet_health-realism-clean.csv`) downloaded automatically if missing.
-- `figs/` — generated training and evaluation plots.
-- `docs/` — placeholder for screenshots and documentation assets.
-- `requirements.txt` — Python dependencies to reproduce the environment.
-- `LICENSE` — MIT license.
+- Validate the dataset's expected fields and separate features from the target.
+- Split the data into training, validation, and test sets before preprocessing.
+- Scale numerical features and encode the habitat category.
+- Compare a small feed-forward network with a larger network that can overfit.
+- Investigate early stopping, L2 regularization, and dropout.
+- Compare learning curves, precision, recall, F1, and ROC-AUC.
+- Select a model using validation results and inspect its test-set performance.
 
-## How to Run
-1. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
-   ```
-2. Install dependencies:
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-3. Launch the notebook from the repository root:
-   ```bash
-   jupyter notebook src/alien-pet-health-deep-learning.ipynb
-   ```
-4. Run cells sequentially. The dataset downloads to `data/` on first run; plots are written to `figs/`.
+## Project context
 
-## What This Project Demonstrates
-- End-to-end deep learning experimentation with clear separation of data prep, training, and evaluation steps.
-- Regularization and generalization techniques (early stopping, dropout, L2) applied to tabular classification.
-- Metric-driven reporting (F1/ROC-AUC) suitable for stakeholder-ready summaries.
-- Reusable helper utilities for dataset caching and preprocessing inside a single notebook workflow.
+This is an academic modelling experiment using TensorFlow/Keras and scikit-learn. My focus was understanding generalization and explaining model behaviour through the recorded experiments.
 
-## Future Improvements
-- Extract reusable preprocessing/model code into a small Python package under `src/` for easier testing and reuse.
-- Add automated checks (linting, formatting, unit tests) and CI to guard experiment code.
-- Parameterize training runs (Hydra/Argparse) and log experiments to MLFlow or Weights & Biases.
-- Provide a lightweight Streamlit demo for quick model exploration once the model is frozen.
+The [notebook](src/alien-pet-health-deep-learning.ipynb) includes the analysis and plots. The dataset and assignment context come from the [CSI4106 course materials](https://github.com/turcotte/csi4106-f25).
 
-## Author
-Omar Khattab
+## License
+
+See [LICENSE](LICENSE).
